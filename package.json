@@ -1,0 +1,29 @@
+{
+  "name": "levxformer",
+  "version": "0.0.1",
+  "description": "A Node implementation of the Wagner-Fischer algorithm which allows for output of various intermediate states of the strings being measured.",
+  "main": "levxformer.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasrstorey/levxformer.git"
+  },
+  "keywords": [
+    "levenshtein",
+    "distance",
+    "string",
+    "metrics"
+  ],
+  "author": "Thomas R Storey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thomasrstorey/levxformer/issues"
+  },
+  "homepage": "https://github.com/thomasrstorey/levxformer#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
