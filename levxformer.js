@@ -10,24 +10,6 @@ module.exports = function (s, t) {
         }
         return m;
     }
-    
-    for (var i = 0; i < t.length; i++) {
-        d[i] = [i]
-    }
-
-    for (var j = 0; j < s.length; j++) {
-        d[0][j] = j;
-    }
-
-    for (var j = 1; j < s.length; j++) {
-        for (var i = 1; i < t.length; i++) {
-            if (s.charAt(j) === t.charAt(i)) {
-                d[i][j] = d[i-1][j-1];
-            } else {
-                d[i][j] = min(d[i-1][j] + 1, d[i][j-1] + 1, d[i-1][j-1] + 1);
-            }
-        }
-    }
 
     function getState (s, t, l, x) {
         var i = d.length - 1;
@@ -71,6 +53,24 @@ module.exports = function (s, t) {
             l = d[i][j];
         }
         return state.slice(1);
+    }
+    
+    for (var i = 0; i < t.length; i++) {
+        d[i] = [i]
+    }
+
+    for (var j = 0; j < s.length; j++) {
+        d[0][j] = j;
+    }
+
+    for (var j = 1; j < s.length; j++) {
+        for (var i = 1; i < t.length; i++) {
+            if (s.charAt(j) === t.charAt(i)) {
+                d[i][j] = d[i-1][j-1];
+            } else {
+                d[i][j] = min(d[i-1][j] + 1, d[i][j-1] + 1, d[i-1][j-1] + 1);
+            }
+        }
     }
 
     return {

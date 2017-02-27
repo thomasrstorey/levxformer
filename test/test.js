@@ -111,8 +111,8 @@ describe('levxformer,', function () {
                     expect(out.distance).to.be.a(typeof c.expected.distance);
                 });
             });
-            it('is equal to the Levenshtein distance between the two strings.', function () {
-                cases.forEach(function (c) {
+            cases.forEach(function (c) {
+                it('is equal to the Levenshtein distance between ' + c.args[0] + ' and ' + c.args[1] + '.', function () {
                     var out = levxformer.apply(null, c.args);
                     expect(out.distance).to.equal(c.expected.distance);
                 });
