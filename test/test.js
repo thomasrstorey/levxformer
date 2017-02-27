@@ -28,7 +28,10 @@ var expect = require('chai').expect,
                          [5, 5, 4, 3, 2, 2, 3],
                          [6, 6, 5, 4, 3, 3, 2],
                          [7, 7, 6, 5, 4, 4, 3]],
-               getState: function () {}
+               getState: function (i) {
+                   var steps = ['sitting', 'kitting', 'kitteng', 'kitten'];
+                   return steps[i];
+               }
             }
         }, {
             args: ['book', 'back'],
@@ -39,7 +42,10 @@ var expect = require('chai').expect,
                          [2, 1, 1, 2, 3],
                          [3, 2, 2, 2, 3],
                          [4, 3, 3, 3, 2]],
-                getState: function () {}
+                getState: function (i) {
+                    var steps = ['back', 'bock', 'book'];
+                    return steps[i];
+                }
             }
         }, {
             args: ['dmitri', 'alexei'],
@@ -52,7 +58,10 @@ var expect = require('chai').expect,
                          [4, 4, 4, 4, 4, 5, 6],
                          [5, 5, 5, 5, 5, 5, 6],
                          [6, 6, 6, 5, 6, 6, 5]],
-               getState: function () {}
+               getState: function (i) {
+                   var steps = ['alexei', 'dlexei', 'dmexei', 'dmixei', 'dmitei', 'dmitri'];
+                   return steps[i];
+               }
             }
         },
     ];
